@@ -10,7 +10,7 @@
         {{ error }}
     </div>
     {% endif %}
-    <form action="/flow/login" method="post">
+    <form action="{{ base_url }}login" method="post">
         <div class="form-group">
             <label for="usernameOrEmail">Nom d'utilisateur ou Email</label>
             <input type="text" class="form-control" id="usernameOrEmail" name="usernameOrEmail" required>

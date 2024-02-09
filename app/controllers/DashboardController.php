@@ -20,12 +20,15 @@ class DashboardController extends BaseController
 
     public function index()
     {
-/*
+
+       // $username = $_SESSION['user']['username']; // Supposons que 'username' est la clé où vous stockez le nom d'utilisateur
+
+
         if(!isset($_SESSION['user'])){
-            $admin = 'is_not_admin';
+            $admin = 'is_authenticated';
             echo $this->twig->render('home.twig', ['admin' => $admin]);
-        }else{
-*/            
+        }
+            
             $userModel = new UserModel();
             $postModel = new PostModel();
             
@@ -34,7 +37,8 @@ class DashboardController extends BaseController
     
             $data = array(
                 'users' => $users,
-                'posts' => $posts
+                'posts' => $posts,
+                //'user'=> $username
             );
             echo $this->twig->render('dashboard.twig', $data);
 //        }

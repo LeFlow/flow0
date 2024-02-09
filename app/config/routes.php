@@ -1,16 +1,18 @@
 <?php
 
+use App\Middleware\AuthMiddleware;
 use App\Controllers\HomeController;
 use App\Controllers\PostController;
 use App\Controllers\UserController;
-use App\Controllers\DashboardController;
 use App\Controllers\LoginController;
+use App\Controllers\DashboardController;
 
 // Définition des routes
 $routes = [
     'GET /' => [HomeController::class, 'index'],
     // Routes pour l'interface d'administration
-    'GET /admin' => [DashboardController::class, 'index'],
+    //'GET /admin' => [DashboardController::class, 'index'],
+    'GET /admin' => [DashboardController::class, 'index', [new AuthMiddleware()]],
 
     // Routes pour la gestion de la connexion
     'GET /login' => [LoginController::class, 'loginForm'],

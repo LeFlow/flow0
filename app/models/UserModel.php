@@ -45,4 +45,13 @@ class UserModel extends BaseModel
         $this->execute($sql, [$id]);
     }
 
+    public function findByUsername($username)
+    {
+        $sql = "SELECT * FROM users WHERE username = ?";
+        $params = [$username];
+        $this->execute($sql, $params);
+        return $this->db->lastInsertId();
+        
+    }
+
 }

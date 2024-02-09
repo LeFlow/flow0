@@ -1,10 +1,25 @@
-.main-home{
-    height: 100vh;
-    background: url('../img/Flow.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.logo{    
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav{
+    padding-left: 20px !important;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+.img-go{
+    height: 100px;
+    width: auto;
+    min-height: 100px;
 }
 
 #tab-user,  #post, #tab-admin{
