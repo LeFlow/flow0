@@ -1,0 +1,12 @@
+.main-home{
+    height: 100vh;
+    background: url('../img/Flow.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#tab-user,  #post, #tab-admin{
+    width: 100%!important;
+}

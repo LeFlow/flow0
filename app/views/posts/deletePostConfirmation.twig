@@ -1,0 +1,14 @@
+{% extends "/base.twig" %}
+{% block title %}Confirmation{% endblock %}
+
+{% block content %}
+    <div class="container col-lg-8 mt-5">
+        <h2>Supprimer le Post</h2>
+        <p>Êtes-vous sûr de vouloir supprimer ce post ?</p>
+        <form action="{{ base_url }}post/delete/{{ post.id }}" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn btn-danger">Supprimer</button>
+            <a href="{{ base_url }}admin" class="btn btn-secondary">Annuler</a>
+        </form>
+    </div>
+{% endblock %}
