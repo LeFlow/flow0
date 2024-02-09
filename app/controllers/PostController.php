@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use Twig\Environment;
@@ -32,7 +31,7 @@ class PostController extends BaseController
         $postData = [
             'title' => $_POST['title'],
             'content' => $_POST['content'],
-            'author_id' => 1 //$_POST['author_id']
+            'author_id' => $_POST['author_id']
         ];
 
         $this->postModel->create($postData);

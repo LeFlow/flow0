@@ -11,7 +11,6 @@ use App\Controllers\DashboardController;
 $routes = [
     'GET /' => [HomeController::class, 'index'],
     // Routes pour l'interface d'administration
-    //'GET /admin' => [DashboardController::class, 'index'],
     'GET /admin' => [DashboardController::class, 'index', [new AuthMiddleware()]],
 
     // Routes pour la gestion de la connexion

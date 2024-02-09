@@ -1,8 +1,5 @@
 <?php
-
 namespace App\Models;
-
-use App\Config\Database;
 
 class LoginModel extends BaseModel
 {

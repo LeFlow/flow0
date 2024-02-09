@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use App\Config\Database;
@@ -17,7 +16,6 @@ class BaseModel
 
     public function query($sql, $params = [])
     {
-        // Exécute une requête SELECT
         $statement = $this->db->prepare($sql);
         $statement->execute($params);
         return $statement;
@@ -25,7 +23,6 @@ class BaseModel
 
     public function execute($sql, $params = [])
     {
-        // Exécute une requête qui ne retourne pas de résultats (INSERT, UPDATE, DELETE, etc.)
         $statement = $this->db->prepare($sql);
         $statement->execute($params);
     }
@@ -51,7 +48,4 @@ class BaseModel
         $statement->execute($params);
         return $statement->fetch();
     }
-
-
-    // Ajoute d'autres méthodes CRUD en fonction de tes besoins
 }
