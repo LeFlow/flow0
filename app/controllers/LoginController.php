@@ -66,19 +66,4 @@ class LoginController extends BaseController
 
         return $this->render('home.twig', $data);
     }
-
-    public function checkIfUserIsAdmin()
-    {
-        if (isset($_SESSION['user_id'])) {
-            $userId = $_SESSION['user_id'];
-
-            $user = $this->userModel->getUserById($userId);
-
-            if ($user && $user['role'] === 'admin') {
-                return true;
-            }
-        }
-        
-        return false;
-    }
 }

@@ -71,8 +71,7 @@ class UserController extends BaseController
 
         $this->userModel->update($id, $userData, $base_url);
 
-        header("Location:" . $base_url . "admin");
-        exit;
+        echo $this->twig->render('admin_user/userAdded.twig', ['base_url' => $base_url]);
     }
 
     public function deleteUserConfirmation($id)

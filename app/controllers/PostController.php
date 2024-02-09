@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 
+use App\Core\Session;
 use Twig\Environment;
 use App\Config\Config;
 use App\Models\PostModel;
@@ -28,10 +29,11 @@ class PostController extends BaseController
     {
         $config = new Config();
         $base_url = $config->getBaseUrl();
+        $author_id = $_SESSION['user']['id'];
         $postData = [
             'title' => $_POST['title'],
             'content' => $_POST['content'],
-            'author_id' => $_POST['author_id']
+            'author_id' => $author_id
         ];
 
         $this->postModel->create($postData);
