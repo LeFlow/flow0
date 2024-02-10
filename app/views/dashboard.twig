@@ -56,7 +56,6 @@
 						<thead>
 							<tr>
 								<th>Titre</th>
-								<th>Contenu</th>
 								<th>Auteur</th>
 								<th>Date de Création</th>
 								<th>Actions</th>
@@ -66,7 +65,6 @@
 							{% for post in posts %}
 								<tr>
 									<td>{{ post.title }}</td>
-									<td>{{ post.content }}</td>
 									{% for user in users %}
 										{%if user.id == post.author_id %}
 											<td>{{ user.username }}</td>

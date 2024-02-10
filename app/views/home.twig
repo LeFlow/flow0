@@ -1,29 +1,26 @@
 {% extends "/base.twig" %}
-{% block title %}Mise a jour d'un article{% endblock %}
+{% block title %}Mise a jour d'un article
+{% endblock %}
 
 {% block content %}
-    <div class="main-home"/>
-        <div class="container">
-            <h1>Bienvenue chez Flow</h1>
-            <hr>
-            <div class="">
-                <h3>Configuration à effectuées</h3>
-                <ul>
-                    <li>
-                        <p>Se rendre dans le fichier 'app\config\Config.php' afin de rensigner '$base_url' qui correspond au dossier racine de votre site</p>    
-                    </li>
-                    <li>
-                        <p>Créer une base de données</p>    
-                    </li>
-                    <li>
-                        <p>Se rendre dans le fichier 'app\config\database.php' afin de renseigner les informations de connexion à la base de données</p>    
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <div class="">
-                <image class="img-go" src="public/img/go.png"></image>
-            </div>
-        </div>
-    </div>
+	<div class="main">
+		<h1>Liste des articles</h1>
+		<div class="article-list">
+			{% for post in posts %}
+				<div class="article">
+					<div class="article-title">{{ post.title }}</div>
+					<div>{{ post.content | length < 250 ? post.content : post.content | slice(0,250) ~ '...' }}</div>
+					<hr>
+					<div class="article-end">
+						{% for user in users %}
+							{%if user.id == post.author_id %}
+								<div class="article-author">{{ user.username }}</div>
+							{% endif %}
+						{% endfor %}
+						<div class="article-date">{{ post.creation_date | date('d/m/Y') }}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 {% endblock %}

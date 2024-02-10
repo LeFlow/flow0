@@ -31,7 +31,7 @@ class DashboardController extends BaseController
             
             $users = $userModel->getAll();
             $posts = $postModel->getAll();
-    
+ 
             $data = array(
                 'users' => $users,
                 'posts' => $posts
