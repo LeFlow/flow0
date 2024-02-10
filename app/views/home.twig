@@ -19,7 +19,9 @@
 						{% endfor %}
 						<div class="article-date">{{ post.creation_date | date('d/m/Y') }}</div>
 					</div>
+					<a href="{{ base_url }}post/{{ post.id }}/show" class="btn btn-primary btn-show">Voir l'aricle</a>
 				</div>
+				
 			{% endfor %}
 		</div>
 	</div>

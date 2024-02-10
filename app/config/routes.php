@@ -30,7 +30,8 @@ $routes = [
     'GET /post/{id}/edit' => [PostController::class, 'updatePostForm'],
     'POST /post/{id}' => [PostController::class, 'updatePost'],
     'POST /post/{id}/delete' => [PostController::class, 'deletePostConfirmation'],
-    'POST /post/delete/{id}' => [PostController::class, 'deletePost']
+    'POST /post/delete/{id}' => [PostController::class, 'deletePost'],
+    'GET /post/{id}/show' => [PostController::class, 'show'],
 ];
 
 return $routes;

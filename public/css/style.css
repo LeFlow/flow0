@@ -9,11 +9,10 @@ nav{
     padding-left: 20px !important;
     position: sticky !important;
     top: 0;
+    z-index: 50;
 }
 
 footer{
-
-    
     width: 100%;
     margin-bottom: 0;
     padding-top: 1rem;
@@ -42,13 +41,16 @@ footer{
 }
 
 .article{
+    position: relative;
     width: 30%;
     border: solid 1px red;
+    border-radius: 10px;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 .article-title{
-    font-size: 2rem!important;
+    font-size: 1.5rem!important;
     font-weight: bold !important;
 }
 
@@ -57,4 +59,10 @@ footer{
     justify-content: flex-end;
     flex-direction: column;
     text-align: end;
+}
+
+.btn-show{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
 }

@@ -89,4 +89,12 @@ class PostController extends BaseController
         header("Location:" . $base_url . "admin");
         exit;
     }
+
+    public function show($id){
+        
+        $postModel = new PostModel;
+        $post = $postModel->getById($id);
+
+        echo $this->twig->render('posts/post.twig', array('post' => $post));
+    }
 }

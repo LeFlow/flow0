@@ -4,7 +4,8 @@
         "twig/twig": "^2.0",
         "cache/apcu-adapter": "^1.3",
         "symfony/polyfill-apcu": "^1.29",
-        "twig/intl-extra": "^3.7"
+        "twig/intl-extra": "^3.7",
+        "dibi/dibi": "^5.0"
     },
     "config":{
         "apcu-autoloader": true,
